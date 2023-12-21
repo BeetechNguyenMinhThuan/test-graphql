@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/graphql": {
+      "name": "/graphql",
+      "lambdaFunction": "test3GraphqlFunction",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

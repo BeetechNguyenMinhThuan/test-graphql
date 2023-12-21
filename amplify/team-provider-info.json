@@ -1,0 +1,29 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-test3graphql-dev-145047-authRole",
+      "UnauthRoleArn": "arn:aws:iam::317235718775:role/amplify-test3graphql-dev-145047-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::317235718775:role/amplify-test3graphql-dev-145047-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-test3graphql-dev-145047-deployment",
+      "UnauthRoleName": "amplify-test3graphql-dev-145047-unauthRole",
+      "StackName": "amplify-test3graphql-dev-145047",
+      "StackId": "arn:aws:cloudformation:us-east-1:317235718775:stack/amplify-test3graphql-dev-145047/7fd714d0-9f0c-11ee-b03b-0ea1c2170c63",
+      "AmplifyAppId": "d3j13ju0chigog"
+    },
+    "categories": {
+      "function": {
+        "test3GraphqlFunction": {
+          "deploymentBucketName": "amplify-test3graphql-dev-145047-deployment",
+          "s3Key": "amplify-builds/test3GraphqlFunction-7a4a57767656542b6631-build.zip"
+        }
+      },
+      "api": {
+        "test3graphql": {}
+      },
+      "auth": {
+        "test3graphqla529b6fa": {}
+      }
+    }
+  }
+}
