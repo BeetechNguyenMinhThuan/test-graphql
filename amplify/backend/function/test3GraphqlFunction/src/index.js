@@ -1,27 +1,19 @@
-const { ApolloServer, gql } = require('apollo-server-lambda')
-/* Construct a schema, using GraphQL schema language */
-const typeDefs = gql`
-  type Query { hello: String }
-`
-/* Provide resolver functions for your schema fields */
-const resolvers = {
-  Query: {
-    hello: () => 'Hello from Apollo 123!!',
-  },
+import mongoose from "mongoose";
+import {server} from "./graphql/schema/schema.js";
+
+const connectDB = async () => {
+    try {
+        await mongoose.connect("mongodb+srv://thuanbin1108:delamgi1@learngraphql.brr9apm.mongodb.net/?retryWrites=true&w=majority")
+        console.log("MongooseDB connected")
+    } catch (err) {
+        console.log(err)
+    }
 }
-const server = new ApolloServer({
-    typeDefs,
-    resolvers,
-    context: ({ event, context }) => ({
-      headers: event.headers,
-      functionName: context.functionName,
-      event,
-      context,
-    }),
-  })
-exports.handler = server.createHandler({
-  cors: {
-    origin: '*',
-    credentials: true,
-  },
+connectDB()
+
+export const handler = server.createHandler({
+    cors: {
+        origin: '*',
+        credentials: true,
+    },
 })
