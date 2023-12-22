@@ -15,7 +15,7 @@
       "function": {
         "test3GraphqlFunction": {
           "deploymentBucketName": "amplify-test3graphql-dev-145047-deployment",
-          "s3Key": "amplify-builds/test3GraphqlFunction-4f78664e456f46304e68-build.zip"
+          "s3Key": "amplify-builds/test3GraphqlFunction-5569547558514f382b4d-build.zip"
         }
       },
       "api": {
