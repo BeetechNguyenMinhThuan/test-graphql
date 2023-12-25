@@ -3,7 +3,7 @@ type Author {
     id: ID!, # ! ý nghĩa là ID phải bắt buộc là string hoặc number, không đc null ( hieu la required)
     name: String,
     age: Int,
-    books: [Book]
+    books: [Book],
 }
 
 # ROOT TYPE
@@ -14,7 +14,7 @@ type Query {
 }
 
 type Mutation {
-    createAuthor(name:String, age: Int): Author
+    createAuthor(name:String, age: Int, image: String): Author
 }
 `
 

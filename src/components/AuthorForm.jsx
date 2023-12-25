@@ -27,8 +27,7 @@ const AuthorForm = (props) => {
         if (!newAuthor.name || !newAuthor.age) {
             return
         }
-        console.log(newAuthor)
-        let data = await addAuthor({
+        await addAuthor({
             variables: {
                 name: newAuthor.name,
                 age: Number(newAuthor.age),

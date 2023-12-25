@@ -6,6 +6,7 @@ const getBooks = gql`
             id
             name
             genre
+            image
             author{
                 id
                 name

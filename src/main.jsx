@@ -8,7 +8,6 @@ import {fetchAuthSession} from "aws-amplify/auth";
 
 Amplify.configure(config);
 const { endpoint } = config.aws_cloud_logic_custom[0];
-
 async function getToken() {
   const data = (await fetchAuthSession()).tokens ?? {};
   return data.idToken.toString();
@@ -18,6 +17,7 @@ const httpLink = new HttpLink({ uri: endpoint + "/graphql" });
 
 const authLink = new ApolloLink((operation, forward) => {
   return getToken().then((token) => {
+    console.log(token)
     operation.setContext({
       headers: {
         Authorization: `Bearer ${token}`,

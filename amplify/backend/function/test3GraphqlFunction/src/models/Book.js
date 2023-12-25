@@ -4,7 +4,8 @@ const bookSchema = new mongoose.Schema(
     {
         name: String,
         genre: String,
-        authorId: String
+        authorId: String,
+        image: String
     },
     {
         timestamps: true,

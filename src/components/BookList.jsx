@@ -10,6 +10,7 @@ import Button from "react-bootstrap/Button";
 import {deleteSingleBook, editSingleBook} from "../graphql-client/mutations";
 import BookForm from "./BookForm";
 import BookFormEdit from "./BookFormEdit";
+import ImageBook from "./Image.jsx";
 
 const BookList = () => {
     const {loading, error, data} = useQuery(getBooks)
@@ -37,7 +38,7 @@ const BookList = () => {
     }
 
     const handleDeleteBook = async (id) => {
-        let data = await deleteBook({
+         await deleteBook({
             variables: {
                 id,
             },
@@ -47,7 +48,7 @@ const BookList = () => {
 
     const handleEditBook = async (book) => {
         setShow(false);
-        let data = await editBook({
+        await editBook({
             variables: {
                 id: book.id,
                 name: book.name,
@@ -72,6 +73,8 @@ const BookList = () => {
                                 <Button onClick={()=>handleShow(book)} className='position-absolute'
                                         style={{left: '0'}}>Edit</Button>
                                 <CardBody>{book.name}</CardBody>
+                                <ImageBook imgKey={book.image}/>
+
                             </Card>
                         </Col>
                     ))}

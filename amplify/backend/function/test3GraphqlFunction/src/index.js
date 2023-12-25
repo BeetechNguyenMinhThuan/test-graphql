@@ -10,7 +10,7 @@ const connectDB = async () => {
     }
 }
 connectDB()
-
+console.log(123123);
 export const handler = server.createHandler({
     cors: {
         origin: '*',

@@ -1,8 +1,8 @@
 import {gql} from "@apollo/client";
 
 const addSingleBook = gql`
-    mutation addSingleBookMutation($name: String, $genre:String, $authorId: ID!){
-        createBook(name:$name, genre:$genre, authorId: $authorId){
+    mutation addSingleBookMutation($name: String, $genre:String, $authorId: ID!, $image: String){
+        createBook(name:$name, genre:$genre, authorId: $authorId, image:$image){
             id
             name
         }
